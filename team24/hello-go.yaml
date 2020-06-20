@@ -1,0 +1,13 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: frontend
+  namespace: default
+spec:
+  template:
+    spec:
+      containers:
+        - image: docker.io/toeikanta/helloworld-go:latest
+          env:
+            - name: TARGET
+              value: "Go Sample v1"
