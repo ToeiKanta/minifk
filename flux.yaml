@@ -111,7 +111,7 @@ items:
         - args:
           - --ssh-keygen-dir=/var/fluxd/keygen
           - --git-url=https://github.com/toeikanta/minifk.git
-          - --git-branch=final
+          - --git-branch=temp
           - --git-poll-interval=30s
           - --git-path=.
           - --git-readonly
