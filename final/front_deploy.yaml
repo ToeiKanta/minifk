@@ -4,7 +4,7 @@ metadata:
   labels:
     app: front
   name: front
-  namespace: default
+  namespace: b6000530
 spec:
   replicas: 1
   selector:

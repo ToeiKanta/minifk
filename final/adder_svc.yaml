@@ -4,7 +4,7 @@ metadata:
   labels:
     app: adder
   name: adder
-  namespace: default
+  namespace: b6000530
 spec:
   ports:
   - port: 8080
