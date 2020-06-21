@@ -1,0 +1,31 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: adder
+  name: adder
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: adder
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: adder
+    spec:
+      containers:
+      - image: chanwit/adder
+        imagePullPolicy: Always
+        name: adder
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      terminationGracePeriodSeconds: 30
